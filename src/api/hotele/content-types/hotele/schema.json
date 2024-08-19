@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hoteles",
+  "info": {
+    "singularName": "hotele",
+    "pluralName": "hoteles",
+    "displayName": "Hoteles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "costo": {
+      "type": "decimal"
+    },
+    "ubicacion": {
+      "type": "string"
+    },
+    "establecimientos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::establecimiento.establecimiento",
+      "mappedBy": "hoteles"
+    }
+  }
+}

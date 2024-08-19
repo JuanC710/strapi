@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuentas",
+  "info": {
+    "singularName": "cuenta",
+    "pluralName": "cuentas",
+    "displayName": "Cuentas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "correo": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "rol": {
+      "type": "integer"
+    },
+    "establecimientos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::establecimiento.establecimiento",
+      "inversedBy": "cuentas"
+    }
+  }
+}
